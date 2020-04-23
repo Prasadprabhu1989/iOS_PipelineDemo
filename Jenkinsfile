@@ -1,8 +1,8 @@
 
-def xcodeproj = 'iOSPipeline.xcodeproj' // Path to the xcodeproj
-def xcarchive_name = "iOSPipeline.xcarchive" // Name of the archive to build
-def build_scheme = 'iOSPipeline' // Scheme to build the app
-def test_scheme = 'iOSPipeline' // Scheme to build tests
+def xcodeproj = 'PipelineDemo.xcodeproj' // Path to the xcodeproj
+def xcarchive_name = "PipelineDemo.xcarchive" // Name of the archive to build
+def build_scheme = 'PipelineDemo' // Scheme to build the app
+def test_scheme = 'PipelineDemo' // Scheme to build tests
 def simulator_device = 'iPhone 7' // Name of the device type to use for tests
 
 
@@ -43,7 +43,7 @@ pipeline {
 	thinning: '', 
 	xcodeProjectFile: '', 
 	xcodeProjectPath: 'PipelineDemo', 
-	xcodeSchema: 'iOSPipeline', 
+	xcodeSchema: 'PipelineDemo', 
 	xcodeWorkspaceFile: '', 
 	xcodebuildArguments: 'test -destination \'platform=iOS Simulator,OS=13.4.1,name=iPhone 11 Pro Max\''
 }
