@@ -45,7 +45,7 @@ pipeline {
 	xcodeProjectPath: 'PipelineDemo', 
 	xcodeSchema: 'PipelineDemo', 
 	xcodeWorkspaceFile: '', 
-	xcodebuildArguments: 'test -destination \'platform=iOS Simulator,OS=13.4.1,name=iPhone 11 Pro Max\ -enableCodeCoverage YES | /usr/local/bin/xcpretty -r junit''
+	xcodebuildArguments: "test -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.4.1' -enableCodeCoverage YES CODE_SIGNING_REQUIRED=YES COMPILER_INDEX_STORE_ENABLE=NO CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES=YES"
 }
                    } 
 
