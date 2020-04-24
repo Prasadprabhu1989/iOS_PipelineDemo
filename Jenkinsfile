@@ -46,8 +46,7 @@ pipeline {
 	xcodeSchema: 'PipelineDemo', 
 	xcodeWorkspaceFile: '', 
 	xcodebuildArguments: 'test -destination \'platform=iOS Simulator,OS=13.4.1,name=iPhone 11 Pro Max\'',
-junit allowEmptyResults: true,
- testResults: '/build/test-reports/*.xml'
+
 }
                    } 
      } 
