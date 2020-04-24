@@ -14,7 +14,7 @@ pipeline {
 				steps {
 	xcodeBuild appURL: '', 
 	assetPackManifestURL: '', 
-	buildDir: '$(WORKSPACE)/build', 
+	buildDir: '', 
 	buildIpa: true, bundleID: '', 
 	bundleIDInfoPlistPath: '', 
 	cfBundleShortVersionStringValue: '', 
@@ -23,7 +23,7 @@ pipeline {
 	cleanResultBundlePath: false, 
 	compileBitcode: false, 
 	configuration: 'development', 
-	developmentTeamID: 'ULN4HA5APP', 
+	developmentTeamID: '', 
 	developmentTeamName: 'Tregaron India Holdings, LLC', 
 	displayImageURL: '', 
 	fullSizeImageURL: '', 
