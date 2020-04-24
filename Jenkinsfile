@@ -45,11 +45,22 @@ pipeline {
 	xcodeProjectPath: 'PipelineDemo', 
 	xcodeSchema: 'PipelineDemo', 
 	xcodeWorkspaceFile: '', 
-	xcodebuildArguments: "test -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max,OS=13.4.1' -enableCodeCoverage /usr/local/bin/xcpretty -r junit"
+	xcodebuildArguments: "test -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max,OS=13.4.1' -enableCodeCoverage YES CODE_SIGNING_REQUIRED=YES COMPILER_INDEX_STORE_ENABLE=NO CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES=YES"
 }
                    } 
 
      }
+stage('Unit tests') {
+        steps {
+            sh 'unit-tests.sh'
+        }
+
+        post {
+            always {
+                junit 'path/to/report.xml'
+            }
+        }
+    }
  
 post {
 
