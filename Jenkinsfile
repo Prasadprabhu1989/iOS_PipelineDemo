@@ -48,12 +48,13 @@ pipeline {
 	xcodebuildArguments: 'test -destination \'platform=iOS Simulator,OS=13.4.1,name=iPhone 11 Pro Max\''
 }
                    } 
-     }
 post {
         always {
             junit 'build/reports/**/*.xml'
         }
-    } 
+    }
+     }
+ 
 post {
 
           always { 
