@@ -9,10 +9,10 @@
 import XCTest
 
 class PipelineDemoUITests: XCTestCase {
-
+    var app : XCUIApplication!
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-
+        app = XCUIApplication()
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
 
@@ -30,6 +30,10 @@ class PipelineDemoUITests: XCTestCase {
 
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
+    func testUI(){
+        app.launch()
+        XCTAssertTrue(app.staticTexts["Test"].exists, "label is visible")
     }
 
     func testLaunchPerformance() throws {
