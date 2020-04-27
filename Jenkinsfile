@@ -28,7 +28,7 @@ pipeline {
 	displayImageURL: '', 
 	fullSizeImageURL: '', 
 	ipaExportMethod: 'development',
- 	ipaName: 'PipelineDemo.${BUILD_DATE}_${VERSION}', 
+ 	ipaName: '$(VERSION)_$(BUILD_DATE)', 
 	ipaOutputDirectory: '', 
 	keychainId: '', 
 	keychainPath: '${HOME}/Library/Keychains/login.keychain', 
@@ -82,9 +82,8 @@ steps{
                             uploadBitcode: false,
                             uploadSymbols: false,
                             xcodeProjectPath: 'PipelineDemo',
-                            xcodeSchema: 'PipelineDemo',
-                            xcodeWorkspaceFile: '',
-
+                            xcodeSchema: 'PipelineDemoTest',
+                            xcodeWorkspaceFile: ''
 
 }
 
