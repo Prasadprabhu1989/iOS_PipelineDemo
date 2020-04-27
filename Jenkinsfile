@@ -49,6 +49,12 @@ pipeline {
 	}
                    
 } 
+
+stage('Test') {
+				steps {
+					sh 'xcodebuild -project PipelineDemo/PipelineDemo -scheme "PipelineDemoTests" -configuration "Debug" build test -destination "platform=iOS Simulator,name=iPhone 11 Pro Max,OS=13.4.1" -enableCodeCoverage YES clean test | /usr/local/bin/ocunit2junit'
+				}
+}
 	stage('Upload') {
 steps{
 		echo 'Hi'
