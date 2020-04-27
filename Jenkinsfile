@@ -49,21 +49,14 @@ pipeline {
 	}
                    
 } 
-	//stage('Unit tests') {
-        	//steps {
-            	//sh 'xcodebuild -project PipelineDemo/PipelineDemo.xcodeproj -scheme "PipelineDemo" -configuration "Debug" build test -destination "platform=iOS Simulator,name=iPhone 11 Pro Max,OS=13.4.1" -enableCodeCoverage YES clean test |/usr/local/bin/ocunit2junit'
-        		//}
-
-        
-    		//}
-
-  	//}
+	stage('Upload') {
+		echo 'Hi'
 
 
-stage('Upload') {
-echo 'Hello'
+	}
 
-}
+
+
  
 post {
 
