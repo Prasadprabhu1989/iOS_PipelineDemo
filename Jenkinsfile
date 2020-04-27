@@ -65,7 +65,6 @@ steps{
                             compileBitcode: false,
                             developmentTeamID: '',
                             developmentTeamName: 'Tregaron India Holdings, LLC',
-
                             displayImageURL: '',
                             fullSizeImageURL: '',
                             ipaExportMethod: 'development',
