@@ -57,7 +57,16 @@ stage('Unit tests') {
         
     }
 
-    
+  }
+stage('Upload') {
+        steps {
+          echo 'upload'
+        }
+
+        
+    }
+
+  }
 
 
  
