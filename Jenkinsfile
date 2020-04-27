@@ -28,7 +28,7 @@ pipeline {
 	displayImageURL: '', 
 	fullSizeImageURL: '', 
 	ipaExportMethod: 'development',
- 	ipaName: '$(VERSION)_$(BUILD_DATE)', 
+ 	ipaName: 'PipelineDemo.${BUILD_DATE}_${VERSION}', 
 	ipaOutputDirectory: '', 
 	keychainId: '', 
 	keychainPath: '${HOME}/Library/Keychains/login.keychain', 
