@@ -59,7 +59,7 @@ stage('Test') {
 steps{
 		echo 'Upload'
 echo 'upload'
-xcodebuild -exportArchive -archivePath  PipelineDemo.xcarchive  -exportPath ${WORKSPACE}/ipa build  -exportOptionsPlist PipelineDemo.plist
+
 
 }
 
