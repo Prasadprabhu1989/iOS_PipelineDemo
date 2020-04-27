@@ -57,7 +57,10 @@ stage('Test') {
 }
 	stage('Upload') {
 steps{
-		echo 'Hi'
+		echo 'Upload'
+echo 'upload'
+xcodebuild -exportArchive -archivePath  **/*.xcarchive  -exportPath ${WORKSPACE}/ipa builds  -exportOptionsPlist  **/*.plist
+
 }
 
 }
