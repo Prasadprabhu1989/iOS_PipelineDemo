@@ -50,7 +50,9 @@ pipeline {
                    
 } 
 	stage('Upload') {
+steps{
 		echo 'Hi'
+}
 
 
 	}
