@@ -58,7 +58,7 @@ stage('Test') {
 	stage('Upload') {
 steps{
 		
-xcodebuild -exportArchive -archivePath  **/*.xcarchive
+
 
 
 }
