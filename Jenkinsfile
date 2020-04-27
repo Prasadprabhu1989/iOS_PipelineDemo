@@ -59,12 +59,13 @@ stage('Test') {
 steps{
 		echo 'Upload'
 //xcodebuild -exportArchive -archivePath  $WORKSPACE/build/xcarchive  -exportPath "${WORKSPACE}/build/ipa"  -exportOptionsPlist  "${WORKSPACE}/build/plist"
- exportIpa appURL: '',
+ 			exportIpa appURL: '',
                             archiveDir: '',
                             assetPackManifestURL: '',
                             compileBitcode: false,
                             developmentTeamID: '',
                             developmentTeamName: 'Tregaron India Holdings, LLC',
+				configuration: 'development',
                             displayImageURL: '',
                             fullSizeImageURL: '',
                             ipaExportMethod: 'development',
