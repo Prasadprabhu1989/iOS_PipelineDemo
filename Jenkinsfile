@@ -66,7 +66,7 @@ stage('Upload') {
             echo 'Upload'
         }
 
-    }
+    
 
      }
 
