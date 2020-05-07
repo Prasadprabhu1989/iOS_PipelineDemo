@@ -60,7 +60,7 @@ steps{
 		echo 'Upload'
 //xcodebuild -exportArchive -archivePath  $WORKSPACE/build/xcarchive  -exportPath "${WORKSPACE}/build/ipa"  -exportOptionsPlist  "${WORKSPACE}/build/plist"
  			exportIpa appURL: '',
-                            archiveDir: '',
+                            archiveDir: '${WORKSPACE}/build',
                             assetPackManifestURL: '',
                             compileBitcode: false,
                             developmentTeamID: '',
@@ -69,7 +69,7 @@ steps{
                             fullSizeImageURL: '',
                             ipaExportMethod: 'development',
                             ipaName: 'PipelineDemo.${BUILD_DATE}_${VERSION}',
-                            ipaOutputDirectory: '${WORKSPACE}/build',
+                            ipaOutputDirectory: '',
                             keychainName: '',
                             keychainPath:  '${HOME}/Library/Keychains/login.keychain',
                         keychainPwd: hudson.util.Secret.fromString(''),
