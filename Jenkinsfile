@@ -67,7 +67,7 @@ steps{
                             developmentTeamName: 'Tregaron India Holdings, LLC',
                             displayImageURL: '',
                             fullSizeImageURL: '',
-                            ipaExportMethod: 'release',
+                            ipaExportMethod: 'development',
                             ipaName: 'PipelineDemo.${BUILD_DATE}_${VERSION}',
                             ipaOutputDirectory: '',
                             keychainName: '',
@@ -82,7 +82,7 @@ steps{
                             uploadBitcode: false,
                             uploadSymbols: false,
                             xcodeProjectPath: 'PipelineDemo',
-                            xcodeSchema: 'PipelineDemoTest',
+                            xcodeSchema: 'PipelineDemo',
                             xcodeWorkspaceFile: ''
 
 }
