@@ -59,7 +59,7 @@ stage('Test') {
 steps{
 		echo 'Upload'
 //xcodebuild -exportArchive -archivePath  $WORKSPACE/build/xcarchive  -exportPath "${WORKSPACE}/build/ipa"  -exportOptionsPlist  "${WORKSPACE}/build/plist"
- 			
+ 			xcrun altool --upload-app --type ios --file $WORKSPACE/build/development-iphoneos/*.ipa --username "rajendrarao" --password "Coolraja1978"
 
 }
 
