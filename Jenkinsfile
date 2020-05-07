@@ -14,7 +14,7 @@ pipeline {
 				steps {
 	xcodeBuild appURL: '', 
 	assetPackManifestURL: '', 
-	buildDir: '', 
+	buildDir: '${WORKSPACE}/build', 
 	buildIpa: true, bundleID: '', 
 	bundleIDInfoPlistPath: '', 
 	cfBundleShortVersionStringValue: '', 
