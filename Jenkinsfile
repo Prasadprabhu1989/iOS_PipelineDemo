@@ -82,7 +82,7 @@ steps{
                             uploadBitcode: false,
                             uploadSymbols: false,
                             xcodeProjectPath: 'PipelineDemo',
-                            xcodeSchema: 'PipelineDemo',
+                            xcodeSchema: 'PipelineDemoTest',
                             xcodeWorkspaceFile: ''
 
 }
