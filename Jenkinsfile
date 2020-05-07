@@ -60,7 +60,7 @@ steps{
 		echo 'Upload'
 //xcodebuild -exportArchive -archivePath  $WORKSPACE/build/xcarchive  -exportPath "${WORKSPACE}/build/ipa"  -exportOptionsPlist  "${WORKSPACE}/build/plist"
  			exportIpa appURL: '',
-                            archiveDir: '',
+                            archiveDir: '${WORKSPACE}/PipelineDemo/PipelineDemo/build/Release-iphoneos',
                             assetPackManifestURL: '',
                             compileBitcode: false,
                             developmentTeamID: '',
