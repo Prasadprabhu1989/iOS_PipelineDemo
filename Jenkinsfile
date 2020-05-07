@@ -69,7 +69,7 @@ steps{
                             fullSizeImageURL: '',
                             ipaExportMethod: 'development',
                             ipaName: 'PipelineDemo.${BUILD_DATE}_${VERSION}',
-                            ipaOutputDirectory: '',
+                            ipaOutputDirectory: '${WORKSPACE}/build',
                             keychainName: '',
                             keychainPath:  '${HOME}/Library/Keychains/login.keychain',
                         keychainPwd: hudson.util.Secret.fromString(''),
