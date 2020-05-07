@@ -67,7 +67,7 @@ steps{
                             developmentTeamName: 'Tregaron India Holdings, LLC',
                             displayImageURL: '',
                             fullSizeImageURL: '',
-                            ipaExportMethod: 'development',
+                            ipaExportMethod: 'release',
                             ipaName: 'PipelineDemo.${BUILD_DATE}_${VERSION}',
                             ipaOutputDirectory: '',
                             keychainName: '',
