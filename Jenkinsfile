@@ -14,7 +14,7 @@ pipeline {
 				steps {
 	xcodeBuild appURL: '', 
 	assetPackManifestURL: '', 
-	buildDir: '${WORKSPACE}/build', 
+	buildDir: '', 
 	buildIpa: true, bundleID: '', 
 	bundleIDInfoPlistPath: '', 
 	cfBundleShortVersionStringValue: '', 
@@ -60,7 +60,7 @@ steps{
 		echo 'Upload'
 //xcodebuild -exportArchive -archivePath  $WORKSPACE/build/xcarchive  -exportPath "${WORKSPACE}/build/ipa"  -exportOptionsPlist  "${WORKSPACE}/build/plist"
  			exportIpa appURL: '',
-                            archiveDir: '${WORKSPACE}/build',
+                            archiveDir: '',
                             assetPackManifestURL: '',
                             compileBitcode: false,
                             developmentTeamID: '',
