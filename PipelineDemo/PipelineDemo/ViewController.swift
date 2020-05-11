@@ -62,6 +62,7 @@ class RepeatingTimer {
 
     func resume() {
         if state == .resumed {
+            
             return
         }
         state = .resumed
