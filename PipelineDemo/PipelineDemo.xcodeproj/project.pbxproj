@@ -15,6 +15,9 @@
 		5F82EC242451C6EF004612F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F82EC222451C6EF004612F2 /* LaunchScreen.storyboard */; };
 		5F82EC2F2451C6F0004612F2 /* PipelineDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F82EC2E2451C6F0004612F2 /* PipelineDemoTests.swift */; };
 		5F82EC3A2451C6F0004612F2 /* PipelineDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F82EC392451C6F0004612F2 /* PipelineDemoUITests.swift */; };
+		5FF0ADF424691F0A00280D12 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF0ADF324691F0A00280D12 /* FirstViewController.swift */; };
+		5FF0ADF624691F1A00280D12 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF0ADF524691F1A00280D12 /* SecondViewController.swift */; };
+		5FF0ADF8246922B500280D12 /* CustomTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF0ADF7246922B500280D12 /* CustomTabController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		5F82EC352451C6F0004612F2 /* PipelineDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PipelineDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F82EC392451C6F0004612F2 /* PipelineDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipelineDemoUITests.swift; sourceTree = "<group>"; };
 		5F82EC3B2451C6F0004612F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FF0ADF324691F0A00280D12 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		5FF0ADF524691F1A00280D12 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		5FF0ADF7246922B500280D12 /* CustomTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +113,9 @@
 				5F82EC202451C6EF004612F2 /* Assets.xcassets */,
 				5F82EC222451C6EF004612F2 /* LaunchScreen.storyboard */,
 				5F82EC252451C6EF004612F2 /* Info.plist */,
+				5FF0ADF324691F0A00280D12 /* FirstViewController.swift */,
+				5FF0ADF524691F1A00280D12 /* SecondViewController.swift */,
+				5FF0ADF7246922B500280D12 /* CustomTabController.swift */,
 			);
 			path = PipelineDemo;
 			sourceTree = "<group>";
@@ -262,7 +271,10 @@
 			files = (
 				5F82EC1C2451C6E1004612F2 /* ViewController.swift in Sources */,
 				5F82EC182451C6E1004612F2 /* AppDelegate.swift in Sources */,
+				5FF0ADF8246922B500280D12 /* CustomTabController.swift in Sources */,
 				5F82EC1A2451C6E1004612F2 /* SceneDelegate.swift in Sources */,
+				5FF0ADF624691F1A00280D12 /* SecondViewController.swift in Sources */,
+				5FF0ADF424691F0A00280D12 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
