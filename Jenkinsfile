@@ -76,7 +76,7 @@ echo 'Hi'
 //sh 'ln -s test-results-unit.xml $WORKSPACE'
 //junit allowEmptyResults: true, testResults: '**/test-results/*.xml'
 //archiveArtifacts artifacts: '**/*.ipa', fingerprint: true
-            junit '$WORKSPACE/PipelineDemo/test-reports/*.xml'
+            junit allowEmptyResults: true, testResults: '**/test-results/*.xml'
 //junit 'build/test-reports/*.xml'
 
          } 
