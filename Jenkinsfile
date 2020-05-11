@@ -76,8 +76,9 @@ echo 'Hi'
 //sh 'ln -s test-results-unit.xml $WORKSPACE'
 //junit allowEmptyResults: true, testResults: '**/test-results/*.xml'
 //archiveArtifacts artifacts: '**/*.ipa', fingerprint: true
-            junit allowEmptyResults: true, testResults: '**/test-reports/*.xml'
+           // junit allowEmptyResults: true, testResults: '**/test-reports/*.xml'
 //junit 'build/test-reports/*.xml'
+step([$class: 'JUnitResultArchiver', allowEmptyResults: true, testResults: '**/test-reports/*.xml, healthScaleFactor: 1.0, fingerprint: true'])
 
          } 
          success { 
