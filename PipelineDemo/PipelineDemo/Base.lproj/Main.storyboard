@@ -35,7 +35,7 @@
             </objects>
             <point key="canvasLocation" x="-1816" y="181"/>
         </scene>
-        <!--Item 2-->
+        <!--VVVVVVV-->
         <scene sceneID="ZuX-92-gCD">
             <objects>
                 <viewController id="9pR-WA-cfx" customClass="SecondViewController" customModule="PipelineDemo" customModuleProvider="target" sceneMemberID="viewController">
@@ -45,27 +45,88 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6qR-4P-asL"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="ulo-Rn-ZfD"/>
+                    <tabBarItem key="tabBarItem" title="VVVVVVV" image="cholcate1" id="ulo-Rn-ZfD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tlu-4m-mYN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="985" y="663"/>
         </scene>
-        <!--Item 1-->
+        <!--Announcements-->
+        <scene sceneID="MbC-0V-JLa">
+            <objects>
+                <viewController id="SYK-Zs-Xdu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MR7-W9-TXp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="GUa-of-gk2"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Announcements" image="choclate2" id="LfB-zY-4pN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sag-UT-ojF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1048" y="602"/>
+        </scene>
+        <!--Events-->
+        <scene sceneID="hpJ-NO-mp1">
+            <objects>
+                <viewController id="Hz6-sM-7pD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FxK-OL-nX7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="vlO-kI-Ref"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Events" image="cholcate3" id="dBw-Ua-LFd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DB4-2E-pgd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-254" y="555"/>
+        </scene>
+        <!--More-->
+        <scene sceneID="fNa-JZ-BJy">
+            <objects>
+                <viewController id="nJ2-cn-7gX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NC5-FH-fhj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="h1x-He-ZaC"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="More" image="download" id="iNp-D3-cff"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M9x-4q-6YS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="492" y="144"/>
+        </scene>
+        <!--Home-->
         <scene sceneID="mc2-68-X4W">
             <objects>
                 <viewController id="FwB-Sj-F72" customClass="FirstViewController" customModule="PipelineDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="be1-Oa-p7Z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KcG-2R-2du">
+                                <rect key="frame" x="191" y="437.5" width="32.5" height="21"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="KcG-2R-2du" firstAttribute="centerX" secondItem="be1-Oa-p7Z" secondAttribute="centerX" id="5a8-Go-geC"/>
+                            <constraint firstItem="KcG-2R-2du" firstAttribute="centerY" secondItem="be1-Oa-p7Z" secondAttribute="centerY" id="lEd-jx-s4G"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="WxT-mV-SSB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="U6I-vl-8au"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="loading" id="U6I-vl-8au"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sdi-mo-aHt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="985" y="14"/>
+            <point key="canvasLocation" x="-1330" y="215"/>
         </scene>
         <!--Custom Tab Controller-->
         <scene sceneID="iqU-Uf-D0a">
@@ -79,11 +140,21 @@
                     <connections>
                         <segue destination="FwB-Sj-F72" kind="relationship" relationship="viewControllers" id="pXt-4x-N2a"/>
                         <segue destination="9pR-WA-cfx" kind="relationship" relationship="viewControllers" id="FRx-qS-dVh"/>
+                        <segue destination="SYK-Zs-Xdu" kind="relationship" relationship="viewControllers" id="q4b-vc-l7R"/>
+                        <segue destination="Hz6-sM-7pD" kind="relationship" relationship="viewControllers" id="8tV-hQ-Wof"/>
+                        <segue destination="nJ2-cn-7gX" kind="relationship" relationship="viewControllers" id="a4h-T3-hU0"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zT6-47-9pX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="83" y="-131"/>
+            <point key="canvasLocation" x="-1049" y="-154"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="choclate2" width="30" height="30"/>
+        <image name="cholcate1" width="30" height="30"/>
+        <image name="cholcate3" width="30" height="30"/>
+        <image name="download" width="30" height="30"/>
+        <image name="loading" width="30" height="30"/>
+    </resources>
 </document>
