@@ -13,20 +13,18 @@ pipeline {
 
 				steps {
 	sh 'xcodebuild -project PipelineDemo/PipelineDemo.xcodeproj -scheme "PipelineDemo" -configuration "Debug" build test -destination "platform=iOS Simulator,name=iPhone 11 Pro Max,OS=13.4.1" -enableCodeCoverage YES clean test | /usr/local/bin/ocunit2junit'
-	}
+	
                    
 } 
 
 stage('Test') {
-				steps {
-					
-				}
+				
 }
 	stage('Upload') {
 steps{
 		echo 'Upload'
 //xcodebuild -exportArchive -archivePath  $WORKSPACE/build/xcarchive  -exportPath "${WORKSPACE}/build/ipa"  -exportOptionsPlist  "${WORKSPACE}/build/plist"
- 	
+ 		
 
 }
 
