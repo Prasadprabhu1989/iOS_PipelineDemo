@@ -27,8 +27,13 @@ class PipelineDemoTests: XCTestCase {
     
     func testSum(){
         let a = 10
-        XCTAssert(a == 10, "Number are equal")
+        XCTAssert(a == 10, "Sum")
     }
+    func testNumber(){
+           let a = 20
+           XCTAssert(a == 20, "Number are equal")
+       }
+
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
