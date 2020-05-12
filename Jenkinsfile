@@ -45,7 +45,7 @@ pipeline {
 	xcodeSchema: 'PipelineDemo', 
 	xcodeWorkspaceFile: '', 
 	xcodebuildArguments: "test -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max,OS=13.4.1' -enableCodeCoverage YES CODE_SIGNING_REQUIRED=YES COMPILER_INDEX_STORE_ENABLE=NO CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES=YES"
-sh 'xcodebuild -project PipelineDemo/PipelineDemo.xcodeproj -scheme "PipelineDemo" -configuration "Debug" build test -destination "platform=iOS Simulator,name=iPhone 11 Pro Max,OS=13.4.1" -enableCodeCoverage YES clean test | /usr/local/bin/ocunit2junit'
+
 
 	}
                    
@@ -64,6 +64,7 @@ steps{
 		echo 'Upload'
 //xcodebuild -exportArchive -archivePath  $WORKSPACE/build/xcarchive  -exportPath "${WORKSPACE}/build/ipa"  -exportOptionsPlist  "${WORKSPACE}/build/plist"
  			sh 'xcrun altool --upload-app --type ios --file $WORKSPACE/PipelineDemo/build/Release-iphoneos/*.ipa --username "rajendrarao" --password "Coolraja1978@1"'
+step([$class: 'JUnitResultArchiver', allowEmptyResults: true, testResults: '$WORKSPACE/PipelineDemo/test-reports/*.xml, healthScaleFactor: 1.0, fingerprint: true'])
 
 }
 
@@ -83,7 +84,7 @@ echo 'Hi'
            // junit allowEmptyResults: true, testResults: '**/test-reports/*.xml'
 //junit 'build/test-reports/*.xml'
 
-step([$class: 'JUnitResultArchiver', allowEmptyResults: true, testResults: '**/test-reports/*.xml, healthScaleFactor: 1.0, fingerprint: true'])
+//step([$class: 'JUnitResultArchiver', allowEmptyResults: true, testResults: '**/test-reports/*.xml, healthScaleFactor: 1.0, fingerprint: true'])
 
          } 
          success { 
