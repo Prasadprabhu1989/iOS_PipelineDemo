@@ -86,7 +86,7 @@ echo 'Hi'
 
 //step([$class: 'JUnitResultArchiver', allowEmptyResults: true, testResults: '**/test-reports/*.xml, healthScaleFactor: 1.0, fingerprint: true'])
 archiveArtifacts artifacts: '$WORKSPACE/PipelineDemo/build/Release-iphoneos/*.ipa', fingerprint: true
-            junit '**/test-results/*.xml'
+            junit '**/test-reports/*.xml'
 
          } 
          success { 
