@@ -64,7 +64,7 @@ steps{
 		echo 'Upload'
 //xcodebuild -exportArchive -archivePath  $WORKSPACE/build/xcarchive  -exportPath "${WORKSPACE}/build/ipa"  -exportOptionsPlist  "${WORKSPACE}/build/plist"
  			sh 'xcrun altool --upload-app --type ios --file $WORKSPACE/PipelineDemo/build/Release-iphoneos/*.ipa --username "rajendrarao" --password "Coolraja1978@1"'
-step([$class: 'JUnitResultArchiver', allowEmptyResults: true, testResults: '$WORKSPACE/PipelineDemo/test-reports/*.xml, healthScaleFactor: 1.0, fingerprint: true'])
+
 
 }
 
@@ -85,6 +85,8 @@ echo 'Hi'
 //junit 'build/test-reports/*.xml'
 
 //step([$class: 'JUnitResultArchiver', allowEmptyResults: true, testResults: '**/test-reports/*.xml, healthScaleFactor: 1.0, fingerprint: true'])
+archiveArtifacts artifacts: '$WORKSPACE/PipelineDemo/build/Release-iphoneos/*.ipa', fingerprint: true
+            junit '**/test-results/*.xml'
 
          } 
          success { 
