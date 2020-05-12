@@ -1,4 +1,3 @@
-
 def xcodeproj = 'PipelineDemo.xcodeproj' // Path to the xcodeproj
 def xcarchive_name = "PipelineDemo.xcarchive" // Name of the archive to build
 def build_scheme = 'PipelineDemo' // Scheme to build the app
@@ -76,15 +75,19 @@ echo 'Hi'
 //sh 'ln -s test-results-unit.xml $WORKSPACE'
 //junit allowEmptyResults: true, testResults: '**/test-results/*.xml'
 //archiveArtifacts artifacts: '**/*.ipa', fingerprint: true
-            //junit '$WORKSPACE/test-reports/*.xml'
+           // junit allowEmptyResults: true, testResults: '**/test-reports/*.xml'
 //junit 'build/test-reports/*.xml'
+
+step([$class: 'JUnitResultArchiver', allowEmptyResults: true, testResults: '**/test-reports/*.xml, healthScaleFactor: 1.0, fingerprint: true'])
 
          } 
          success { 
   mail bcc: '', body: "<b>Details</b><br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL}", cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "SUCCESS CI: Project name -> ${env.JOB_NAME}", to: "nkdiyasys@gmail.com";
 
          } 
+
          failure { 
+step([$class: 'JUnitResultArchiver', allowEmptyResults: true, testResults: '**/test-reports/*.xml, healthScaleFactor: 1.0, fingerprint: true'])
            mail bcc: '', body: "<b>Details</b><br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL}", cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "ERROR CI: Project name -> ${env.JOB_NAME}", to: "nkdiyasys@gmail.com"; 
        } 
          unstable { 
