@@ -17,9 +17,7 @@ pipeline {
                    
 } 
 
-stage('Test') {
-				
-}
+
 	stage('Upload') {
 steps{
 		echo 'Upload'
