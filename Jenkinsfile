@@ -46,13 +46,17 @@ pipeline {
 	xcodeSchema: 'PipelineDemo', 
 	xcodeWorkspaceFile: '', 
 	xcodebuildArguments: "test -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max,OS=13.4.1' -enableCodeCoverage YES CODE_SIGNING_REQUIRED=YES COMPILER_INDEX_STORE_ENABLE=NO CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES=YES",
-					sh 'xcodebuild -project PipelineDemo/PipelineDemo.xcodeproj -scheme "PipelineDemo" -configuration "Debug" build test -destination "platform=iOS Simulator,name=iPhone 11 Pro Max,OS=13.4.1" -enableCodeCoverage YES clean test | /usr/local/bin/ocunit2junit'
 
+sh 'xcodebuild -project PipelineDemo/PipelineDemo.xcodeproj -scheme "PipelineDemo" -configuration "Debug" build test -destination "platform=iOS Simulator,name=iPhone 11 Pro Max,OS=13.4.1" -enableCodeCoverage YES clean test | /usr/local/bin/ocunit2junit'
 	}
                    
 } 
 
-
+stage('Test') {
+				steps {
+					sh 'xcodebuild -project PipelineDemo/PipelineDemo.xcodeproj -scheme "PipelineDemo" -configuration "Debug" build test -destination "platform=iOS Simulator,name=iPhone 11 Pro Max,OS=13.4.1" -enableCodeCoverage YES clean test | /usr/local/bin/ocunit2junit'
+				}
+}
 	stage('Upload') {
 steps{
 		echo 'Upload'
@@ -74,7 +78,7 @@ echo 'Hi'
 //sh 'ln -s test-results-unit.xml $WORKSPACE'
 //junit allowEmptyResults: true, testResults: '**/test-results/*.xml'
 //archiveArtifacts artifacts: '**/*.ipa', fingerprint: true
-            junit '$WORKSPACE/PipelineDemo/test-reports/*.xml'
+            //junit '$WORKSPACE/test-reports/*.xml'
 //junit 'build/test-reports/*.xml'
 
          } 
