@@ -33,7 +33,7 @@ step([$class: 'JUnitResultArchiver', allowEmptyResults: true, testResults: '**/t
 steps{
 		echo 'Upload'
 //xcodebuild -exportArchive -archivePath  $WORKSPACE/build/xcarchive  -exportPath "${WORKSPACE}/build/ipa"  -exportOptionsPlist  "${WORKSPACE}/build/plist"
- 			sh 'xcrun altool --upload-app --type ios --file $WORKSPACE/PipelineDemo/build/Release-iphoneos/*.ipa --username "rajendrarao" --password "Coolraja1978@1"'
+ 			//sh 'xcrun altool --upload-app --type ios --file $WORKSPACE/PipelineDemo/build/Release-iphoneos/*.ipa --username "rajendrarao" --password "Coolraja1978@1"'
 
 
 }
