@@ -27,3 +27,37 @@ sh 'xcodebuild -project PipelineDemo/PipelineDemo.xcodeproj -scheme "PipelineDem
 
 
  
+post {
+
+          always { 
+echo 'Hi'
+//sh 'ln -s test-results-unit.xml $WORKSPACE'
+//junit allowEmptyResults: true, testResults: '**/test-results/*.xml'
+//archiveArtifacts artifacts: '**/*.ipa', fingerprint: true
+           // junit allowEmptyResults: true, testResults: '**/test-reports/*.xml'
+//junit 'build/test-reports/*.xml'
+
+//step([$class: 'JUnitResultArchiver', allowEmptyResults: true, testResults: '**/test-reports/*.xml, healthScaleFactor: 1.0, fingerprint: true'])
+//archiveArtifacts artifacts: '$WORKSPACE/PipelineDemo/build/Release-iphoneos/*.ipa', fingerprint: true
+            //junit '**/test-reports/*.xml'
+
+         } 
+         success { 
+  mail bcc: '', body: "<b>Details</b><br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL}", cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "SUCCESS CI: Project name -> ${env.JOB_NAME}", to: "nkdiyasys@gmail.com";
+
+         } 
+
+         failure { 
+
+           mail bcc: '', body: "<b>Details</b><br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL}", cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "ERROR CI: Project name -> ${env.JOB_NAME}", to: "nkdiyasys@gmail.com"; 
+       } 
+         unstable { 
+mail bcc: '', body: "<b>Details</b><br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL}", cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "UNSTABLE CI: Project name -> ${env.JOB_NAME}", to: "nkdiyasys@gmail.com"; 
+         } 
+         changed { 
+mail bcc: '', body: "<b>Details</b><br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL}", cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "PREVIOUSLY FAILING BUT IS NOW SUCCESSFUL CI: Project name -> ${env.JOB_NAME}", to: "nkdiyasys@gmail.com";
+}
+                   } 
+
+}
+
