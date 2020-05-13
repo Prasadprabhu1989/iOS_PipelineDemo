@@ -9,9 +9,6 @@ pipeline {
 	agent any
 		stages {
 
-				
-
-}
 			stage('Build') {
 
 				steps {
@@ -25,6 +22,7 @@ sh 'xcodebuild -project PipelineDemo/PipelineDemo.xcodeproj -scheme "PipelineDem
 
 
 
+	}
 
 
 
