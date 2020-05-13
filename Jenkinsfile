@@ -21,40 +21,7 @@ step([$class: 'JUnitResultArchiver', allowEmptyResults: true, testResults: '**/t
 			stage('Build') {
 
 				steps {
-	xcodeBuild appURL: '', 
-	assetPackManifestURL: '', 
-	buildDir: '', 
-	buildIpa: true, bundleID: '', 
-	bundleIDInfoPlistPath: '', 
-	cfBundleShortVersionStringValue: '', 
-	cfBundleVersionValue: '', 
-	cleanBeforeBuild: false, 
-	cleanResultBundlePath: false, 
-	compileBitcode: false, 
-	configuration: 'Release', 
-	developmentTeamID: '', 
-	developmentTeamName: 'Tregaron India Holdings, LLC', 
-	displayImageURL: '', 
-	fullSizeImageURL: '', 
-	ipaExportMethod: 'development',
- 	ipaName: '${BUILD_DATE}_${VERSION}', 
-	ipaOutputDirectory: '', 
-	keychainId: '', 
-	keychainPath: '${HOME}/Library/Keychains/login.keychain', 
-	keychainPwd: hudson.util.Secret.fromString(''), 
-	logfileOutputDirectory: '', 
-	provisioningProfiles: [[provisioningProfileAppId: 'com.lockdown.app', 		provisioningProfileUUID: '4e3f3e97-d9d0-465e-9340-de6a3e0acc30']], 
-	resultBundlePath: '', 
-	sdk: '', 
-	signingMethod: 'manual', 
-	symRoot: '', 
-	target: '', 
-	thinning: '', 
-	xcodeProjectFile: '', 
-	xcodeProjectPath: 'PipelineDemo', 
-	xcodeSchema: 'PipelineDemo', 
-	xcodeWorkspaceFile: '', 
-	xcodebuildArguments: "test -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max,OS=13.4.1' CODE_SIGNING_REQUIRED=YES COMPILER_INDEX_STORE_ENABLE=NO CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES=YES"
+	echo 'Build'
 
 
 	}
