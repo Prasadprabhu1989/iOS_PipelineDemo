@@ -8,15 +8,7 @@ def simulator_device = 'iPhone 7' // Name of the device type to use for tests
 pipeline {
 	agent any
 		stages {
-stage('Test') {
-				steps{
-echo 'Test'
-					//sh 'xcodebuild -project PipelineDemo/PipelineDemo.xcodeproj -scheme "PipelineDemo" -configuration "Debug" build test -destination "platform=iOS Simulator,name=iPhone 11 Pro Max,OS=13.4.1" -enableCodeCoverage YES clean test | /usr/local/bin/ocunit2junit'
 
-//step([$class: 'JUnitResultArchiver', allowEmptyResults: true, testResults: '**/test-reports/*.xml, healthScaleFactor: 1.0, fingerprint: true'])
-
-
-}
 				
 
 }
@@ -32,17 +24,7 @@ sh 'xcodebuild -project PipelineDemo/PipelineDemo.xcodeproj -scheme "PipelineDem
 } 
 
 
-	stage('Upload') {
-steps{
-		echo 'Upload'
-//xcodebuild -exportArchive -archivePath  $WORKSPACE/build/xcarchive  -exportPath "${WORKSPACE}/build/ipa"  -exportOptionsPlist  "${WORKSPACE}/build/plist"
- 			//sh 'xcrun altool --upload-app --type ios --file $WORKSPACE/PipelineDemo/build/Release-iphoneos/*.ipa --username "rajendrarao" --password "Coolraja1978@1"'
 
-
-}
-
-}
-	}
 
 
 
